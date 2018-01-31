@@ -1,4 +1,4 @@
-/* Cargar archivos usando AJAX */
+/* Cargar archivos usando AJAX (Forma Nueva) */
 
 // Evento 'click' sobre el elemento para cargar datos
 document .getElementById( 'cargar' ) .addEventListener( 'click', cargarDatos );
@@ -20,27 +20,20 @@ function cargarDatos() {
      * 403:Prohibido, 
      * 404:No Encontrado, 
      * entre muchos otros
-     * 
-     * Ready Status: 
-     * 0 - No Inicializado
-     * 1 - Conexión establecida
-     * 2 - Recibido
-     * 3 - Procesando
-     * 4 - Respuesta lista
      */
-    // onreadystatechange: Una vez carga la conexión
-    xhr .onreadystatechange = function() {
+    // Onload: Una ves carga la conexión
+    xhr .onload = function() {
 
         console .group( 'Cambio de estado' );
             console .log( `Estado ${ this .readyState }` );
         console .groupEnd();
-        
-        // Valida si 'Ready Status' es: 4 y el 'Status' es: 200
-        if( this .readyState === 4 && this .status === 200 ) {  
+
+        // Valida si 'Status' es: 200
+        if( this .status === 200 ) {    // Si el estado es: Correcto
             console .log( this .responseText );
             document .getElementById( 'listado' ) .innerHTML = `<h1>${ this .responseText }</h1>`;
         }
-    }
+    }   
 
     // Enviar el Request (Petición)
     xhr .send();
