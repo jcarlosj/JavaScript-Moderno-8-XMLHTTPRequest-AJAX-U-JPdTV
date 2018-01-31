@@ -1,0 +1,20 @@
+[
+     {
+          "id" : 1,
+          "nombre" : "Juan David Herrera Ramírez",
+          "empresa" : "MiráWeb",
+          "trabajo" : "Desarrollador BackEnd"
+     },
+     {
+          "id" : 2,
+          "nombre" : "Bryan Paul Muñoz Cuadros",
+          "empresa" : "MiráWeb",
+          "trabajo" : "Desarrollador FrontEnd"
+     },
+     {
+          "id" : 3,
+          "nombre" : "Melisa Sanchez Zambrano",
+          "empresa" : "MiráWeb",
+          "trabajo" : "Experta en Marketing Digital"
+     }
+]
